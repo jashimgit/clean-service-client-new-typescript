@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ServiceItem from "./ServiceItem";
 
+type serviceTypes = {
+  imageUrl: string;
+  serviceName: string;
+  details: string;
+  id: string;
+};
+
 const Services = () => {
   const [serviceList, setServiceList] = useState([]);
 
@@ -28,7 +35,7 @@ const Services = () => {
               </div>
             </div>
           ) : (
-            serviceList.map((item) => (
+            serviceList.map((item: serviceTypes) => (
               <ServiceItem service={item} key={item.id} />
             ))
           )}

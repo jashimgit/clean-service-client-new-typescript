@@ -1,6 +1,8 @@
 import React from "react";
-import customer1 from "../../assets/1.jpg";
-import customer2 from "../../assets/2.jpg";
+
+import customer2 from "../../../assets/2.jpg";
+
+import customer1 from "../../../assets/1.jpg";
 
 const Features = () => {
   return (
