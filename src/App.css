@@ -1,0 +1,23 @@
+.header-section {
+  background-image: url("./assets/images/03-home-2-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+}
+.header-description {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  width: 500px;
+}
+
+.header-description h1 {
+  color: #293f5b;
+}
+.header h1 {
+  color: #5d95db;
+}
