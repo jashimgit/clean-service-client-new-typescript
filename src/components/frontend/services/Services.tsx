@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ServiceItem from "./ServiceItem";
 
-type serviceTypes = {
-  imageUrl: string;
-  serviceName: string;
-  details: string;
-  id: string;
-};
+import { IserviceTypes } from "../../interfaces/interfaces";
 
 const Services = () => {
   const [serviceList, setServiceList] = useState([]);
@@ -35,7 +30,7 @@ const Services = () => {
               </div>
             </div>
           ) : (
-            serviceList.map((item: serviceTypes) => (
+            serviceList.map((item: IserviceTypes) => (
               <ServiceItem service={item} key={item.id} />
             ))
           )}
