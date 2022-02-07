@@ -62,20 +62,18 @@ const ManageService = () => {
     <>
       <h4>Manage Services</h4>
       <div className="col-md-12">
-        <div className="card">
-          <div className="card-body shadow">
-            <table className="table">
-              <thead>
-                <tr>
-                  <th scope="col">Service Name</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Image</th>
-                  <th scope="col">Action</th>
-                </tr>
-              </thead>
-              <tbody> {serviceRow} </tbody>
-            </table>
-          </div>
+        <div className="table-responsive">
+          <table className="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Service Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody> {serviceRow} </tbody>
+          </table>
         </div>
       </div>
     </>

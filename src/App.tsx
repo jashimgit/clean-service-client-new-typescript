@@ -8,6 +8,7 @@ import AddServiceForm from "./components/dashboard/dashboard/AddServiceForm";
 import AddAdminForm from "./components/dashboard/dashboard/AddAdminForm";
 import AddReviewForm from "./components/dashboard/dashboard/AddReviewForm";
 import ManageService from "./components/dashboard/dashboard/ManageService";
+import Index from "./components/dashboard/dashboard/Index";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="" element={<Index />} />
           <Route path="orders" element={<Orders />} />
           <Route path="add-service" element={<AddServiceForm />} />
           <Route path="add-admin" element={<AddAdminForm />} />

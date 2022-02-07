@@ -1,6 +1,10 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
+import { FiHome, FiUsers } from "react-icons/fi";
+import { AiOutlineFile } from "react-icons/ai";
+import { BiCart } from "react-icons/bi";
+import { ImStack } from "react-icons/im";
+import { VscGear } from "react-icons/vsc";
 
 export default function Sidebar() {
   return (
@@ -12,37 +16,49 @@ export default function Sidebar() {
         <ul className="nav flex-column">
           <li className="nav-item">
             <Link className="nav-link active" to="/dashboard">
-              <span data-feather="home"></span>
-              Dashboard <span className="sr-only">(current)</span>
+              <span>
+                <FiHome />
+              </span>
+              Dashboard
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/orders">
-              <span data-feather="file"></span>
+              <span>
+                <AiOutlineFile />
+              </span>
               Orders
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/add-service">
-              <span data-feather="shopping-cart"></span>
+              <span>
+                <BiCart />
+              </span>
               Add Service
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/add-admin">
-              <span data-feather="users"></span>
+              <span>
+                <FiUsers />
+              </span>
               Make Admin
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/add-review">
-              <span data-feather="bar-chart-2"></span>
+              <span>
+                <ImStack />
+              </span>
               Review service
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/manage-service">
-              <span data-feather="layers"></span>
+              <span>
+                <VscGear />
+              </span>
               Manage Service
             </Link>
           </li>

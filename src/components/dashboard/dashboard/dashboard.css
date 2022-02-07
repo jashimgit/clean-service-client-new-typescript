@@ -1,5 +1,7 @@
 body {
   font-size: 0.875rem;
+  margin: 0;
+  padding: 0;
 }
 
 .feather {
@@ -72,7 +74,7 @@ body {
    * Navbar
    */
 
-.navbar-brand {
+.navbar-brand_dashboard {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 1rem;

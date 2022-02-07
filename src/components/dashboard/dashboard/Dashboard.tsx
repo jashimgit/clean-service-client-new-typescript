@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Layout from "../shared/Layout";
 import "./dashboard.css";
+import Index from "./Index";
 
 export default function Dashboard() {
   return (

@@ -1,3 +1,8 @@
+body {
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0;
+}
 .header-section {
   background-image: url("./assets/images/03-home-2-1.jpg");
   background-repeat: no-repeat;
@@ -20,12 +25,4 @@
 }
 .header h1 {
   color: #5d95db;
-}
-
-.col-example {
-  padding: 1rem;
-  background-color: #33b5e5;
-  border: 2px solid #fff;
-  color: #fff;
-  text-align: center;
 }
