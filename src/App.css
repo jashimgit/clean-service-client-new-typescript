@@ -21,3 +21,11 @@
 .header h1 {
   color: #5d95db;
 }
+
+.col-example {
+  padding: 1rem;
+  background-color: #33b5e5;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+}

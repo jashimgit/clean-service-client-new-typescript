@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ServiceItem from "./ServiceItem";
 
-import { IserviceTypes } from "../../interfaces/interfaces";
+import { IService } from "../../../interfaces/interfaces";
 
 const Services = () => {
-  const [serviceList, setServiceList] = useState([]);
+  const [serviceList, setServiceList] = useState<IService[]>([]);
 
   useEffect(() => {
     async function fetchService() {
@@ -30,8 +30,8 @@ const Services = () => {
               </div>
             </div>
           ) : (
-            serviceList.map((item: IserviceTypes) => (
-              <ServiceItem service={item} key={item.id} />
+            serviceList.map((item: IService) => (
+              <ServiceItem service={item} key={item._id} />
             ))
           )}
         </div>

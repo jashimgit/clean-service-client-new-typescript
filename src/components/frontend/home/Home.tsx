@@ -3,6 +3,8 @@ import Header from "../Header";
 import Features from "../features/Features";
 import Services from "../services/Services";
 import PricePlans from "../priceplans/PricePlans";
+import Review from "../review/Review";
+import TopFooter from "../shared/TopFooter";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <Features />
       <Services />
       <PricePlans />
+      <Review />
+      <TopFooter />
     </Layout>
   );
 }

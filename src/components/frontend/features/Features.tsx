@@ -6,7 +6,7 @@ import customer1 from "../../../assets/1.jpg";
 
 const Features = () => {
   return (
-    <div className="container my-5">
+    <div className="container my-5" id="features">
       <div className="row">
         <div className="col-md-4">
           <div className="card bg-info d-flex flex-column justify-content-center align-items-center p-4">

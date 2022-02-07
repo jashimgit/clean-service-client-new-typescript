@@ -1,15 +1,11 @@
-import React from "react";
+import { IService } from "../../../interfaces/interfaces";
 
 type ServiceProps = {
-  service: {
-    imageUrl: string;
-    serviceName: string;
-    details: string;
-  };
+  service: IService;
 };
 
-const ServiceItem = (props: ServiceProps) => {
-  const { imageUrl, serviceName, details } = props.service;
+const ServiceItem = ({ service }: ServiceProps) => {
+  const { imageUrl, serviceName, details } = service;
   return (
     <div className="col-md-4 mb-3">
       <div className="card mb-3 h-100">
