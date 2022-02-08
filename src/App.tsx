@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="" element={<Index />} />
+          <Route index element={<Index />} />
           <Route path="orders" element={<Orders />} />
           <Route path="add-service" element={<AddServiceForm />} />
           <Route path="add-admin" element={<AddAdminForm />} />

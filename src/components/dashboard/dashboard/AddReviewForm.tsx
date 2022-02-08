@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { IReview } from "../../../interfaces/interfaces";
-import SingleReview from "../../frontend/review/SingleReview";
-
+import { FaPencilAlt, FaTrash } from "react-icons/fa";
 const AddReviewForm = () => {
   const [reviews, setReviews] = useState<IReview[]>([]);
 
@@ -39,10 +38,8 @@ const AddReviewForm = () => {
             <thead>
               <tr>
                 <th>#</th>
-
                 <th>Email</th>
                 <th>Review</th>
-
                 <th>Action</th>
               </tr>
             </thead>
@@ -53,7 +50,12 @@ const AddReviewForm = () => {
                   <td>{review.userEmail}</td>
                   <td>{review.reviewMsg}</td>
                   <td>
-                    <button className="btn btn-sm btn-danger">Edit</button>
+                    <button className="btn btn-info btn-sm mr-2" type="button">
+                      <FaPencilAlt />
+                    </button>
+                    <button className="btn btn-danger btn-sm " type="button">
+                      <FaTrash />
+                    </button>
                   </td>
                 </tr>
               ))}

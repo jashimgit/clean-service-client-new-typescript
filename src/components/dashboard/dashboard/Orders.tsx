@@ -1,6 +1,4 @@
-import React from "react";
-import { Table } from "./Table";
-
+import { FaPencilAlt, FaTrash } from "react-icons/fa";
 const Orders = () => {
   return (
     <>
@@ -24,6 +22,14 @@ const Orders = () => {
               <td>data</td>
               <td>placeholder</td>
               <td>text</td>
+              <td>
+                <button className="btn btn-info btn-sm mr-2" type="button">
+                  <FaPencilAlt />
+                </button>
+                <button className="btn btn-danger btn-sm " type="button">
+                  <FaTrash />
+                </button>
+              </td>
             </tr>
             <tr>
               <td>1,002</td>
@@ -31,28 +37,14 @@ const Orders = () => {
               <td>irrelevant</td>
               <td>visual</td>
               <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-
-            <tr>
-              <td>1,012</td>
-              <td>text</td>
-              <td>placeholder</td>
-              <td>layout</td>
-              <td>dashboard</td>
+              <td>
+                <button className="btn btn-info btn-sm mr-2" type="button">
+                  <FaPencilAlt />
+                </button>
+                <button className="btn btn-danger btn-sm " type="button">
+                  <FaTrash />
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
