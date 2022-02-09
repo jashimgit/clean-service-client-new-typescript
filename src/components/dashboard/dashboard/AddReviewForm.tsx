@@ -45,7 +45,7 @@ const AddReviewForm = () => {
             </thead>
             <tbody>
               {reviews.map((review, index) => (
-                <tr>
+                <tr key={index}>
                   <td>{review._id}</td>
                   <td>{review.userEmail}</td>
                   <td>{review.reviewMsg}</td>

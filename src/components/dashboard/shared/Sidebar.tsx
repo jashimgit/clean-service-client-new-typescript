@@ -16,7 +16,7 @@ export default function Sidebar() {
         <ul className="nav flex-column">
           <li className="nav-item">
             <Link className="nav-link active" to="/dashboard">
-              <span>
+              <span className="mr-2">
                 <FiHome />
               </span>
               Dashboard
@@ -24,7 +24,7 @@ export default function Sidebar() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/orders">
-              <span>
+              <span className="mr-2">
                 <AiOutlineFile />
               </span>
               Orders
@@ -32,34 +32,34 @@ export default function Sidebar() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/add-service">
-              <span>
+              <span className="mr-2">
                 <BiCart />
               </span>
-              Add Service
+              Add New Service
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/add-admin">
-              <span>
+              <span className="mr-2">
                 <FiUsers />
               </span>
-              Make Admin
+              Create New Admin
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/add-review">
-              <span>
+              <span className="mr-2">
                 <ImStack />
               </span>
-              Review service
+              Reviews
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard/manage-service">
-              <span>
+              <span className="mr-2">
                 <VscGear />
               </span>
-              Manage Service
+              Service
             </Link>
           </li>
         </ul>
