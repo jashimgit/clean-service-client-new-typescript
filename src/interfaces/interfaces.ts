@@ -1,5 +1,5 @@
 export interface IService {
-  _id: string;
+  _id?: string;
   serviceName: string;
   price: string;
   status: string;
@@ -14,4 +14,3 @@ export interface IReview {
   userEmail: string;
   reviewMsg: string;
 }
-

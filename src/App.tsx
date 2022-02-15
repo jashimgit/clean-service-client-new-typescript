@@ -21,8 +21,8 @@ function App() {
           <Route path="orders" element={<Orders />} />
           <Route path="add-service" element={<AddServiceForm />} />
           <Route path="add-admin" element={<AddAdminForm />} />
-          <Route path="add-review" element={<AddReviewForm />} />
-          <Route path="manage-service" element={<ManageService />} />
+          <Route path="reviews" element={<AddReviewForm />} />
+          <Route path="services" element={<ManageService />} />
         </Route>
       </Routes>
     </BrowserRouter>

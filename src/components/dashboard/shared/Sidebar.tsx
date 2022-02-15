@@ -47,7 +47,7 @@ export default function Sidebar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/dashboard/add-review">
+            <Link className="nav-link" to="/dashboard/reviews">
               <span className="mr-2">
                 <ImStack />
               </span>
@@ -55,7 +55,7 @@ export default function Sidebar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/dashboard/manage-service">
+            <Link className="nav-link" to="/dashboard/services">
               <span className="mr-2">
                 <VscGear />
               </span>

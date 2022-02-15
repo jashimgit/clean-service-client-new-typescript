@@ -15,52 +15,49 @@ const ManageService = () => {
 
   // get service from the redux state
   const serviceList = useAppSelector(getAllService);
-  const services = serviceList[0].data;
+
   // fetch service from api
   const fetchService = async () => {
-    await fetch("https://clean-server.herokuapp.com/service")
+    await fetch(import.meta.env.VITE_API_BASE_URL + "/service")
       .then((res) => res.json())
-      .then((data) => dispatch(setService(data)))
-      .catch((err) => console.log(err));
+      .then((data) => dispatch(setService(data.data)));
   };
 
   useEffect(() => {
     fetchService();
-    // console.log(serviceList[0].data);
+    console.log(serviceList);
   }, []);
 
   const serviceRow =
-    services &&
-    services.map(
-      (service: { _id: any; serviceName: any; price: any; imageUrl: any }) => {
-        const { _id, serviceName, price, imageUrl } = service;
-        return (
-          <tr key={_id}>
-            <td>{serviceName}</td>
-            <td>{price}</td>
-            <td>
-              <img
-                src={imageUrl}
-                alt=""
-                style={{ width: "80px", height: "50px" }}
-              />
-            </td>
-            <td>
-              <button className="btn btn-info btn-sm mr-2" type="button">
-                <FaPencilAlt />
-              </button>
-              <button
-                className="btn btn-danger btn-sm "
-                type="button"
-                // onClick={(event) => handleDeleteService(_id, event)}
-              >
-                <FaTrash />
-              </button>
-            </td>
-          </tr>
-        );
-      }
-    );
+    serviceList &&
+    serviceList.map((service) => {
+      const { _id, serviceName, price, imageUrl } = service;
+      return (
+        <tr key={_id}>
+          <td>{serviceName}</td>
+          <td>{price}</td>
+          <td>
+            <img
+              src={imageUrl}
+              alt=""
+              style={{ width: "80px", height: "50px" }}
+            />
+          </td>
+          <td>
+            <button className="btn btn-info btn-sm mr-2" type="button">
+              <FaPencilAlt />
+            </button>
+            <button
+              className="btn btn-danger btn-sm "
+              type="button"
+              // onClick={(event) => handleDeleteService(_id, event)}
+            >
+              <FaTrash />
+            </button>
+          </td>
+        </tr>
+      );
+    });
 
   return (
     <>
