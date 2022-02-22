@@ -2,18 +2,8 @@ import { useState, useEffect } from "react";
 import { IReview } from "../../../interfaces/interfaces";
 import { FaPencilAlt, FaTrash } from "react-icons/fa";
 import ReviewsList from "./ReviewsList";
+
 const AddReviewForm = () => {
-  // const [reviews, setReviews] = useState<IReview[]>([]);
-
-  // useEffect(() => {
-  //   async function fetchReview() {
-  //     const response = await fetch("https://clean-server.herokuapp.com/review");
-  //     const data = await response.json();
-  //     setReviews(data.data);
-  //   }
-  //   fetchReview();
-  // }, []);
-
   const handleEditReview = (e: React.MouseEvent<HTMLButtonElement>) => {
     console.log(e);
   };
@@ -35,9 +25,6 @@ const AddReviewForm = () => {
             Submit Review
           </button>
         </form>
-      </div>
-      <div>
-        <ReviewsList handleEditReview={handleEditReview} />
       </div>
     </>
   );

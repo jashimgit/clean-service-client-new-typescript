@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { IService } from "../../../interfaces/interfaces";
 import { FaPencilAlt, FaTrash } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
+import ProductServices from "../../../services/ProductServices";
 
 import {
   setService,
@@ -18,9 +19,12 @@ const ManageService = () => {
 
   // fetch service from api
   const fetchService = async () => {
-    await fetch(import.meta.env.VITE_API_BASE_URL + "/service")
-      .then((res) => res.json())
-      .then((data) => dispatch(setService(data.data)));
+    // await fetch(import.meta.env.VITE_API_BASE_URL + "/service")
+    //   .then((res) => res.json())
+    //   .then((data) => dispatch(setService(data.data)));
+    await ProductServices.getServices().then((response) =>
+      dispatch(setService(response))
+    );
   };
 
   useEffect(() => {

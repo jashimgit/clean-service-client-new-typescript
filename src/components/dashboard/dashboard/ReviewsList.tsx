@@ -4,13 +4,14 @@ import { getAllReviews, setReviews } from "../../../redux/features/reviewSlice";
 import { useAppSelector } from "../../../redux/hooks";
 import { FaPencilAlt, FaTrash } from "react-icons/fa";
 import { IReview } from "../../../interfaces/interfaces";
+import ReviewService from "../../../services/ReviewService";
 
 interface IPropsType {
   handleEditReview: (item: IReview) => void;
 }
 
 export default function ReviewsList<IPropsType>(props: IPropsType) {
-  const { handleEditReview } = props;
+  // const { handleEditReview } = props;
 
   const dispatch = useDispatch();
   // get reviews from state
@@ -18,9 +19,12 @@ export default function ReviewsList<IPropsType>(props: IPropsType) {
 
   // fetch reviews from api
   const fetchReviews = async () => {
-    await fetch(import.meta.env.VITE_API_BASE_URL + "/review")
-      .then((res) => res.json())
-      .then((data) => dispatch(setReviews(data.data)));
+    // await fetch(import.meta.env.VITE_API_BASE_URL + "/review")
+    //   .then((res) => res.json())
+    //   .then((data) => dispatch(setReviews(data.data)));
+    await ReviewService.getReviews().then((response) =>
+      dispatch(setReviews(response))
+    );
   };
 
   useEffect(() => {
@@ -52,7 +56,6 @@ export default function ReviewsList<IPropsType>(props: IPropsType) {
                     title="Edit Review"
                     className="btn btn-info btn-sm mr-2"
                     type="button"
-                    onClick={() => handleEditReview({ review })}
                   >
                     <FaPencilAlt />
                   </button>

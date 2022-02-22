@@ -9,6 +9,7 @@ import AddAdminForm from "./components/dashboard/dashboard/AddAdminForm";
 import AddReviewForm from "./components/dashboard/dashboard/AddReviewForm";
 import ManageService from "./components/dashboard/dashboard/ManageService";
 import Index from "./components/dashboard/dashboard/Index";
+import Reviews from "./components/dashboard/dashboard/Reviews";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="orders" element={<Orders />} />
           <Route path="add-service" element={<AddServiceForm />} />
           <Route path="add-admin" element={<AddAdminForm />} />
-          <Route path="reviews" element={<AddReviewForm />} />
+          <Route path="reviews" element={<Reviews />} />
           <Route path="services" element={<ManageService />} />
         </Route>
       </Routes>
