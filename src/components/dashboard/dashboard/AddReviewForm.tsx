@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
 import { IReview } from "../../../interfaces/interfaces";
 import { FaPencilAlt, FaTrash } from "react-icons/fa";
+import ReviewsList from "./ReviewsList";
 const AddReviewForm = () => {
-  const [reviews, setReviews] = useState<IReview[]>([]);
+  // const [reviews, setReviews] = useState<IReview[]>([]);
 
-  useEffect(() => {
-    async function fetchReview() {
-      const response = await fetch("https://clean-server.herokuapp.com/review");
-      const data = await response.json();
-      setReviews(data.data);
-    }
-    fetchReview();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchReview() {
+  //     const response = await fetch("https://clean-server.herokuapp.com/review");
+  //     const data = await response.json();
+  //     setReviews(data.data);
+  //   }
+  //   fetchReview();
+  // }, []);
+
+  const handleEditReview = (e: React.MouseEvent<HTMLButtonElement>) => {
+    console.log(e);
+  };
 
   return (
     <>
@@ -32,36 +37,7 @@ const AddReviewForm = () => {
         </form>
       </div>
       <div>
-        <h4 className="my-3">All Reviews</h4>
-        <div className="table-responsive">
-          <table className="table table-striped table-sm">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Email</th>
-                <th>Review</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {reviews.map((review, index) => (
-                <tr key={index}>
-                  <td>{review._id}</td>
-                  <td>{review.userEmail}</td>
-                  <td>{review.reviewMsg}</td>
-                  <td>
-                    <button className="btn btn-info btn-sm mr-2" type="button">
-                      <FaPencilAlt />
-                    </button>
-                    <button className="btn btn-danger btn-sm " type="button">
-                      <FaTrash />
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <ReviewsList handleEditReview={handleEditReview} />
       </div>
     </>
   );

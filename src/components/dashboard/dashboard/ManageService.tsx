@@ -25,7 +25,7 @@ const ManageService = () => {
 
   useEffect(() => {
     fetchService();
-    console.log(serviceList);
+    console.log("manage service list mounted");
   }, []);
 
   const serviceRow =
@@ -61,7 +61,9 @@ const ManageService = () => {
 
   return (
     <>
-      <h4 className="my-2">Service List - {serviceList.length}</h4>
+      <h4 className="my-2">
+        Service List - {serviceList.length} Items available
+      </h4>
       <div className="col-md-12">
         <div className="table-responsive">
           <table className="table table-striped table-sm">

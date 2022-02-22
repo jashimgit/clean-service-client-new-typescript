@@ -10,7 +10,7 @@ export interface IService {
 }
 
 export interface IReview {
-  _id: string;
-  userEmail: string;
-  reviewMsg: string;
+  _id?: string | null;
+  userEmail: string | null;
+  reviewMsg: string | null;
 }

@@ -2,21 +2,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../store";
 import { IService } from "./../../../interfaces/interfaces";
 
-interface Service {
-  _id?: string;
-  serviceName: string;
-  price: string;
-  status: string;
-  imageUrl: string;
-  details: string;
-  id?: string;
-  __v?: number;
-}
+// define initial state Types
 interface ServiceState {
-  allService: Service[];
+  allService: IService[];
 }
 
-// initial state
+//  define initial state
 const initialState: ServiceState = {
   allService: [],
 };
