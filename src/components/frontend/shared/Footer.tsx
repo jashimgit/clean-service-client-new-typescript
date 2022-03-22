@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="container">
+    <div className="w-100">
       <div className="row">
         <div className="col">
           <div

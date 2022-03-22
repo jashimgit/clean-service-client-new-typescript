@@ -14,3 +14,8 @@ export interface IReview {
   userEmail: string | null;
   reviewMsg: string | null;
 }
+
+export interface IuserLogin {
+  email: string;
+  password: string;
+}

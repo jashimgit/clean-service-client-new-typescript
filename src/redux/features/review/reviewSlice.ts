@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IReview } from "../../interfaces/interfaces";
-import { RootState } from "../store";
+import { IReview } from "../../../interfaces/interfaces";
+import { RootState } from "../../store";
 
 interface ReviewState {
   allReviews: IReview[];

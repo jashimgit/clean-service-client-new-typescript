@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import reviewSlice from "./features/reviewSlice";
+import reviewSlice from "./features/review/reviewSlice";
 import serviceReducer from "./features/service/serviceSlice";
 
 export const store = configureStore({

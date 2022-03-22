@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getAllReviews, setReviews } from "../../../redux/features/reviewSlice";
+import { getAllReviews, setReviews } from "../../../redux/features/review/reviewSlice";
 import { useAppSelector } from "../../../redux/hooks";
 import { FaPencilAlt, FaTrash } from "react-icons/fa";
 import { IReview } from "../../../interfaces/interfaces";

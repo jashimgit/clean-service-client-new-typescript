@@ -7,9 +7,9 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="container-fluid">
+    <div>
       <Navbar />
-      {children}
+    {children}
       <Footer />
     </div>
   );
