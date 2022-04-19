@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { IService } from "../../../interfaces/interfaces";
+import ProductServices from "../../../services/ProductServices";
 import SingleService from "./SingleService";
 
 type priceTypes = {
@@ -10,7 +12,7 @@ type priceTypes = {
 };
 
 const PricePlans = () => {
-  const [serviceList, setServiceList] = useState([]);
+  const [serviceList, setServiceList] = useState<IService[]>([] as IService[]);
   const navigate = useNavigate();
 
   const handlePurchase = (id: any) => {
@@ -20,9 +22,12 @@ const PricePlans = () => {
 
   useEffect(() => {
     async function fetchService() {
-      const res = await fetch("https://clean-server.herokuapp.com/service");
-      const json = await res.json();
-      setServiceList(json.data);
+      // const res = await fetch("https://clean-server.herokuapp.com/service");
+      // const json = await res.json();
+      // setServiceList(json.data);
+      ProductServices.getServices()
+        .then((res) => console.log(res))
+        .catch((e) => console.log(e.message));
     }
 
     fetchService();
@@ -46,11 +51,10 @@ const PricePlans = () => {
             </div>
           </div>
         ) : (
-          serviceList.map((service: priceTypes) => (
+          serviceList.map((service: IService) => (
             <SingleService
               service={service}
               key={service._id}
-              _id=""
               handlePurchase={handlePurchase}
             />
           ))

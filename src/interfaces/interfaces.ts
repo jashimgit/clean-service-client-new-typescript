@@ -19,3 +19,14 @@ export interface IuserLogin {
   email: string;
   password: string;
 }
+
+export interface IOrders {
+  id: string;
+  serviceId: string;
+  serviceName: string;
+  price: number;
+  quantity: number;
+  customerEmail: string;
+  orderTime: string;
+  status: string;
+}

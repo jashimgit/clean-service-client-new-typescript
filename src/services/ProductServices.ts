@@ -2,7 +2,7 @@ import { IService } from "../interfaces/interfaces";
 import requests from "./httpService";
 
 class ProductServices {
-  getServices(): Promise<IService> {
+  getServices(): Promise<IService[]> {
     return requests.get("/service");
   }
   getProductServiceById(id: string) {

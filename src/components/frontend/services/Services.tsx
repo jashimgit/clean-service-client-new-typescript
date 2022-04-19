@@ -2,15 +2,19 @@ import { useEffect, useState } from "react";
 import ServiceItem from "./ServiceItem";
 
 import { IService } from "../../../interfaces/interfaces";
+import ProductServices from "../../../services/ProductServices";
 
 const Services = () => {
-  const [serviceList, setServiceList] = useState<IService[]>([]);
+  const [serviceList, setServiceList] = useState<IService[]>([] as IService[]);
 
   useEffect(() => {
     async function fetchService() {
-      const res = await fetch("https://clean-server.herokuapp.com/service");
-      const service = await res.json();
-      setServiceList(service.data);
+      // const res = await fetch("https://clean-server.herokuapp.com/service");
+      // const service = await res.json();
+      // setServiceList(service.data);
+      ProductServices.getServices()
+        .then((res) => setServiceList(res))
+        .catch((error) => console.log("service api error", error.message));
     }
     fetchService();
   }, []);

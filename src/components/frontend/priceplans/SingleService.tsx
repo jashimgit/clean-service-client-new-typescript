@@ -1,15 +1,12 @@
 import React from "react";
+import { IService } from "../../../interfaces/interfaces";
 
-type priceTypes = {
-  _id: any;
-  service: {
-    serviceName: string;
-    price: number;
-    _id: any;
-  };
+type IProps = {
+  service: IService;
+  key: string;
   handlePurchase: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
-const SingleService = ({ service, handlePurchase }: priceTypes) => {
+const SingleService = ({ service, handlePurchase }: IProps) => {
   // serviceItem = service.serviceItem;
 
   const { serviceName, price, _id } = service;
@@ -25,7 +22,7 @@ const SingleService = ({ service, handlePurchase }: priceTypes) => {
         <div className="my-5 text-center ">
           <button
             className="btn btn-success text-center"
-            onClick={() => handlePurchase(service._id)}
+            onClick={() => handlePurchase()}
           >
             Purchase
           </button>
